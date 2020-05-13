@@ -16,7 +16,7 @@
 
 'use strict';
 
-// [START datacatalog_taggings_bigquery_tables]
+// [START datacatalog_tag_bigquery_tables]
 /**
  * This application demonstrates how to tag Big Query tables with 
  * Data Catalog.
@@ -182,9 +182,11 @@ const main = async (
     console.log(`Tag created for entry: ${entry.name}`);
 }
 
-// node taggingBigQueryTables.js <organizationId> <query>
+// node tagBigQueryTables.js <projectId> <tagTemplateId> <datasetId> <tableId>
 // sample values:
-// organizationId = 111111000000;
-// query = 'type=dataset'
+// projectId = my-project;
+// tagTemplateId = 'my-template';
+// datasetId = 'my-dataset';
+// tableId = 'my-table'
 main(...process.argv.slice(2));
-// [END datacatalog_taggings_bigquery_tables]
+// [END datacatalog_tag_bigquery_tables]
